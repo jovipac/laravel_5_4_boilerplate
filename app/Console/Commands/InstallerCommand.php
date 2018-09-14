@@ -7,19 +7,19 @@ use Illuminate\Filesystem\Filesystem;
 use Intervention\Image\ImageServiceProviderLaravel5;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Process\Process;
+use App\Traits\Seedable;
+use DB;
 
-class AppInstaller extends Command
+class InstallerCommand extends Command
 {
     use Seedable;
-
-    protected $seedersPath = __DIR__.'/../../publishable/database/seeds/';
 
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'app:install';
+    protected $signature = 'app:installer';
 
     /**
      * The console command description.
@@ -38,7 +38,12 @@ class AppInstaller extends Command
         parent::__construct();
     }
 
-        /**
+    public function fire(Filesystem $filesystem)
+    {
+        return $this->handle($filesystem);
+    }
+
+    /**
      * Get the composer command for the environment.
      *
      * @return string
@@ -50,11 +55,6 @@ class AppInstaller extends Command
         }
 
         return 'composer';
-    }
-
-    public function fire(Filesystem $filesystem)
-    {
-        return $this->handle($filesystem);
     }
 
     /**
@@ -86,8 +86,6 @@ class AppInstaller extends Command
         $this->call('vendor:publish', ['--provider' => ImageServiceProviderLaravel5::class]);
         $this->line(' ');
 
-        $this->info('Setting up the hooks');
-        $this->call('hook:setup');
 
         $this->info('Adding the storage symlink to your public folder');
         $this->call('storage:link');
