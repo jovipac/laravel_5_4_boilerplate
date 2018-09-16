@@ -38,8 +38,8 @@ return [
             'plural'   => 'Menus',
         ],
         'measure'     => [
-            'singular' => 'Measure',
-            'plural'   => 'Measures',
+            'singular' => 'Medida',
+            'plural'   => 'Medidas',
         ],        
         'page'     => [
             'singular' => 'Page',
