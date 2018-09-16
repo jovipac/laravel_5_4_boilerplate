@@ -52,7 +52,7 @@
                         @endif
                         <div class="copy animated fadeIn">
                             <h1>{{ Voyager::setting('admin.title', 'Voyager') }}</h1>
-                            <p>{{ Voyager::setting('admin.description', __('voyager::login.welcome')) }}</p>
+                            <p>{{ Voyager::setting('admin.description', __('login.welcome')) }}</p>
                         </div>
                     </div> <!-- .logo-title-container -->
                 </div>
@@ -63,27 +63,27 @@
 
             <div class="login-container">
 
-                <p>{{ __('voyager::login.signin_below') }}</p>
+                <p>{{ __('login.signin_below') }}</p>
 
                 <form action="{{ route('voyager.login') }}" method="POST">
                     {{ csrf_field() }}
                     <div class="form-group form-group-default" id="emailGroup">
-                        <label>{{ __('voyager::generic.name') }}</label>
+                        <label>{{ __('generic.username') }}</label>
                         <div class="controls">
-                            <input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="{{ __('voyager::generic.name') }}" class="form-control" required>
+                            <input type="text" name="username" id="username" value="{{ old('username') }}" placeholder="{{ __('generic.username') }}" class="form-control" required>
                          </div>
                     </div>
 
                     <div class="form-group form-group-default" id="passwordGroup">
-                        <label>{{ __('voyager::generic.password') }}</label>
+                        <label>{{ __('generic.password') }}</label>
                         <div class="controls">
-                            <input type="password" name="password" placeholder="{{ __('voyager::generic.password') }}" class="form-control" required>
+                            <input type="password" name="password" placeholder="{{ __('generic.password') }}" class="form-control" required>
                         </div>
                     </div>
 
                     <button type="submit" class="btn btn-block login-button">
-                        <span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('voyager::login.loggingin') }}...</span>
-                        <span class="signin">{{ __('voyager::generic.login') }}</span>
+                        <span class="signingin hidden"><span class="voyager-refresh"></span> {{ __('login.loggingin') }}...</span>
+                        <span class="signin">{{ __('generic.login') }}</span>
                     </button>
 
               </form>
