@@ -44,6 +44,14 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+		if ($exception instanceof \Illuminate\Session\TokenMismatchException) {    
+            // flash your message
+  
+              \Session::flash('message', 'Lo siento, su sesión parece haber expirado. Inténtalo de nuevo.'); 
+  
+              return redirect('login');
+          }
+                  
         return parent::render($request, $exception);
     }
 
