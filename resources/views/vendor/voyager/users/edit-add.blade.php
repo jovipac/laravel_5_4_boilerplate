@@ -42,13 +42,13 @@
                             <div class="form-group">
                                 <label for="username">{{ __('generic.username') }}</label>
                                 <input type="text" class="form-control" id="username" name="username" placeholder="{{ __('generic.username') }}"
-                                       value="@if(isset($dataTypeContent->username)){{ $dataTypeContent->username }}@endif">
+                                    required=""   value="@if(isset($dataTypeContent->username)){{ $dataTypeContent->username }}@endif">
                             </div>
 
                             <div class="form-group">
                                 <label for="name">{{ __('generic.name') }}</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="{{ __('generic.name') }}"
-                                       value="@if(isset($dataTypeContent->name)){{ $dataTypeContent->name }}@endif">
+                                    required=""   value="@if(isset($dataTypeContent->name)){{ $dataTypeContent->name }}@endif">
                             </div>
 
                             <div class="form-group">
@@ -63,7 +63,7 @@
                                     <br>
                                     <small>{{ __('profile.password_hint') }}</small>
                                 @endif
-                                <input type="password" class="form-control" id="password" name="password" value="" autocomplete="new-password">
+                                <input type="password" class="form-control" id="password" name="password" value="" autocomplete="new-password" required="">
                             </div>
 
                             @can('editRoles', $dataTypeContent)

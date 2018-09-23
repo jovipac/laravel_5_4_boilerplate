@@ -1,20 +1,56 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<html>
+  <head>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('site.title', config('app.name')) }}</title>
+    <title>
+    @section('page-title')
+    @show 
+    </title>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        color: #B0BEC5;
+        display: table;
+        font-weight: 100;
+        font-family: 'Lato';
+      }
+
+      .container {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .content {
+        text-align: center;
+        display: inline-block;
+      }
+
+      .title {
+        font-size: 156px;
+      }
+
+      .quote {
+        font-size: 36px;
+      }
+
+      .explanation {
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="app">
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -29,7 +65,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('site.title', config('app.name') ) }}
+                      {{ config('site.title', config('app.name') ) }}
                     </a>
                 </div>
 
@@ -73,8 +109,9 @@
 
         @yield('content')
     </div>
-
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-</body>
+
+  </body>
 </html>
