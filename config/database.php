@@ -51,7 +51,7 @@ return [
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
             'prefix' => env('DB_TABLE_PREFIX', ''),
             'strict' => true,
-            'engine' => env('DB_ENGINE', null),
+            'engine' => env('DB_ENGINE', 'InnoDB ROW_FORMAT=DYNAMIC'),
         ],
 
         'pgsql' => [

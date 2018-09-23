@@ -82,6 +82,9 @@ class InstallerCommand extends Command
             'DB_PASSWORD'   => $dbPassword
         ]);
 
+        $this->info('Publishing the Voyager assets, database, and config files');
+
+        // Publish only relevant resources on install
         $this->info('Publishing vendor packages...');
         $this->call('vendor:publish', ['--provider' => ImageServiceProviderLaravel5::class]);
         $this->line(' ');
@@ -99,10 +102,12 @@ class InstallerCommand extends Command
         $process->setWorkingDirectory(base_path())->run();
 
         if ( $env_update ) {
+
             $this->info('Migrating the database tables into your application');
             $this->call('migrate');
 
             $this->info('Seeding data into the database');
+            $this->seed('VoyagerDatabaseSeeder');            
             $this->seed('DatabaseSeeder');
             $this->line(' ');
  
