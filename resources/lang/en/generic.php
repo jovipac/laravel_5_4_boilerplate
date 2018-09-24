@@ -65,6 +65,7 @@ return [
     'public_url'             => 'Public URL',
     'read'                   => 'Read',
     'rename'                 => 'Rename',
+    'register'               => 'Register',
     'required'               => 'Required',
     'return_to_list'         => 'Return to List',
     'route'                  => 'Route',

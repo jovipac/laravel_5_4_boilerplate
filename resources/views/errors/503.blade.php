@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>{{ setting('site.title') }} Error 500</title>
+    <title>{{ setting('site.title') }} Error 503</title>
 
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 

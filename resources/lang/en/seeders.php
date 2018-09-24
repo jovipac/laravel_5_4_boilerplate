@@ -86,6 +86,7 @@ return [
             'icon_image'                 => 'Admin Icon Image',
             'loader'                     => 'Admin Loader',
             'title'                      => 'Admin Title',
+            'title_value'                => 'Admin',
         ],
         'site'  => [
             'description'                  => 'Site Description',

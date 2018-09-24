@@ -6,7 +6,7 @@
 @section('content')
     <div class="container">
       <div class="content">
-        <div class="title">401</div>
+        <div class="title">{!! isset($exception)? ($exception->getStatusCode()?$exception->getStatusCode():$default_error_message): '401' !!}</div>
         <div class="quote">Unauthorized action.</div>
         <div class="explanation">
           <br>

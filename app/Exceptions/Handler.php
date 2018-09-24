@@ -52,7 +52,17 @@ class Handler extends ExceptionHandler
               return redirect('login');
           }
                   
-        return parent::render($request, $exception);
+        // Custom error view on production
+        if (config('app.debug')==false) {
+
+            if($this->isHttpException($exception)){
+                if (view()->exists('errors.'.$exception->getStatusCode()))
+                {
+                    return response()->view('errors.'.$exception->getStatusCode(), [], $exception->getStatusCode());
+                }
+            }
+        } 
+            return parent::render($request, $exception);       
     }
 
     /**

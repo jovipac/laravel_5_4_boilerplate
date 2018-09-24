@@ -87,6 +87,7 @@ return [
             'icon_image'                 => 'Imagen de icono de Administrador',
             'loader'                     => 'Cargador de Administración',
             'title'                      => 'Título de Administrador',
+            'title_value'                => 'Administración',
         ],
         'site'  => [
             'description'                  => 'Descripción del sitio',

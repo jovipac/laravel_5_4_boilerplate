@@ -43,7 +43,7 @@
   <body>
     <div class="container">
       <div class="content">
-        <div class="title">429</div>
+        <div class="title">{!! isset($exception)? ($exception->getStatusCode()?$exception->getStatusCode():$default_error_message): '429' !!}</div>
         <div class="quote">Too many requests.</div>
         <div class="explanation">
           <br>

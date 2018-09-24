@@ -61,6 +61,7 @@ return [
     'public_url'             => 'URL pública',
     'read'                   => 'Leer',
     'rename'                 => 'Renombrar',
+    'register'               => 'Registrarse',
     'required'               => 'Necesario',
     'return_to_list'         => 'Volver a la lista',
     'route'                  => 'Ruta',

@@ -67,6 +67,8 @@ class InstallerCommand extends Command
         $this->line('Let\'s install the App!');
         $this->line(' ');
 
+        $this->call('config:cache');
+        
         $this->info("Database configuration...");
         $dbName = $this->ask('Enter the database name');
         $dbUser = $this->ask('Enter the database user', 'root');
