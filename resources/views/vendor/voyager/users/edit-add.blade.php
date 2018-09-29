@@ -63,7 +63,7 @@
                                     <br>
                                     <small>{{ __('profile.password_hint') }}</small>
                                 @endif
-                                <input type="password" class="form-control" id="password" name="password" value="" autocomplete="new-password" required="">
+                                <input type="password" class="form-control" id="password" name="password" value="" autocomplete="new-password">
                             </div>
 
                             @can('editRoles', $dataTypeContent)
