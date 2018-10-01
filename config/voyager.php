@@ -32,7 +32,8 @@ return [
     */
 
     'controllers' => [
-        'namespace' => 'App\\Http\\Controllers\\Admin',
+        'namespace' => 'TCG\\Voyager\\Http\\Controllers',
+        'namespace' => 'App\\Http\\Controllers\\Admin\\Voyager',
     ],
 
     /*

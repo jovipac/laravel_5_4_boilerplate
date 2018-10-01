@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Voyager;
 
 use TCG\Voyager\Http\Controllers\VoyagerController as BaseVoyagerController;
 

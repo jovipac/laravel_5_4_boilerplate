@@ -83,7 +83,7 @@
                 </div>
                 <h1>{{ setting('site.description') }}</h1>
                 <div class="links">
-                        <?php $admin_logo_img = Voyager::setting('admin.icon_image', ''); ?>
+                        <?php $admin_logo_img = Voyager::setting('admin.logo', ''); ?>
                         @if($admin_logo_img == '')
                         <img class="img-responsive pull-left flip logo hidden-xs animated fadeIn" src="{{ voyager_asset('images/logo-icon.png') }}" alt="Logo Icon">
                         @else
