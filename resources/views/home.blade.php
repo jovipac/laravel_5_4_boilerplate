@@ -18,7 +18,13 @@
                         </div>
                     @endif
 
-                    {{ trans('message.logged') }}. Start creating your amazing application!
+
+                <div class="jumbotron">
+                    <h1>Bienvenido</h1>
+                    <p class="lead">{{ trans('message.logged') }}</p>
+                </div>
+
+
                 </div>
             </div>
         </div>
