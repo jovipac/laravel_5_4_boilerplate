@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
-@section('content')
+@section('htmlheader_title')
+	{{ trans('message.home') }}
+@endsection
+
+@section('main-content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -14,7 +18,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    {{ trans('message.logged') }}. Start creating your amazing application!
                 </div>
             </div>
         </div>
