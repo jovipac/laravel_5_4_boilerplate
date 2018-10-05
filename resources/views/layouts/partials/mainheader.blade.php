@@ -58,7 +58,7 @@
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="{{ Gravatar::get($user->email) }}" class="img-circle" alt="User Image" />
+                                <img src="{{ $user_avatar }}" class="img-circle" alt="User Image" />
                                 <p>
                                     {{ Auth::user()->name }}
                                     <small>{{ trans('message.login') }} Nov. 2012</small>
